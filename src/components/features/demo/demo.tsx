@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function DemoSection() {
   const handleRedirect = (): void => {
@@ -11,7 +12,6 @@ export function DemoSection() {
   return (
     <section className="py-28 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -32,9 +32,11 @@ export function DemoSection() {
           transition={{ duration: 0.4 }}
           className="mt-12 rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur shadow-xl hover:shadow-2xl transition"
         >
-          <img
+          <Image
             src="/images/demo.png"
             alt="PaperMind Demo"
+            width={1200}
+            height={700}
             className="w-full"
           />
         </motion.div>
