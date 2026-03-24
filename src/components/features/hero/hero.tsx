@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const handleRedirect = () => {
-    window.location.href = "https://papermind-tbo2.vercel.app/";
+    window.location.href =process.env.NEXT_PUBLIC_APP_URL!;
   };
 
   const handleScroll = () => {
