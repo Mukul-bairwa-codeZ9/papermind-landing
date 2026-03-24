@@ -4,13 +4,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-export function CTASection() {
+export  function CTASection() {
   const handleRedirect = (): void => {
     window.location.href = "https://papermind-tbo2.vercel.app/";
   };
 
   return (
-    <section className="py-28 bg-gradient-to-b from-neutral-950 to-black text-white">
+    <section className="py-28 bg-linear-to-b from-neutral-950 to-black text-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
         
         {/* Heading */}
