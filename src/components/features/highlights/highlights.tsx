@@ -34,7 +34,7 @@ const features: Feature[] = [
 
 export  function Highlights(){
   return (
-    <section className="py-24 bg-black text-white">
+    <section id="features" className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         
         {/* Heading */}

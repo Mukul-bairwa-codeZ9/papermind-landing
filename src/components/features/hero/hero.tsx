@@ -8,17 +8,24 @@ export function Hero() {
     window.location.href = "https://papermind-tbo2.vercel.app/";
   };
 
+  const handleScroll = () => {
+    const section = document.getElementById("features");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center text-center px-6 bg-gradient-to-b from-black to-neutral-900 text-white">
-      <div className="max-w-3xl">
-        
+    <section className="min-h-screen flex items-center justify-center text-center px-6 bg-linear-to-b from-black to-neutral-900 text-white">
+      <div className="max-w-4xl">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
-          Chat with your documents using AI
+          <span className="text-white">
+            Chat with your documents —  get{" "}
+            <span className="text-neutral-300">accurate answers</span> instantly
+          </span>
         </motion.h1>
 
         <motion.p
@@ -27,8 +34,8 @@ export function Hero() {
           transition={{ delay: 0.2 }}
           className="mt-6 text-lg text-neutral-400"
         >
-          Upload PDFs and get accurate, context-aware answers powered by RAG.
-          No hallucinations — just real insights from your data.
+          Upload PDFs and ask questions in plain English. Get fast, accurate
+          answers grounded in your data — not guesses.
         </motion.p>
 
         <motion.div
@@ -48,7 +55,8 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full px-8"
+            className="rounded-full px-8 text-gray-900 hover:bg-white/10 hover:text-white"
+            onClick={handleScroll}
           >
             Learn More
           </Button>
