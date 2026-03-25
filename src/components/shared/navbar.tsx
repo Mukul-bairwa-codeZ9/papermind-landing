@@ -9,8 +9,13 @@ export function Navbar() {
     window.location.href = process.env.NEXT_PUBLIC_APP_URL!;
   };
 
+  const navLinks = [
+    { id: "features", text: "Features" },
+    { id: "demo", text: "Demo" },
+  ];
+
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+    <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl md:py-4">
       <Container>
         <div className="flex items-center justify-between p-4">
           {/* Logo */}
@@ -23,31 +28,22 @@ export function Navbar() {
             <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
               PaperMind
             </span>{" "}
-            
           </motion.h1>
           {/*  Nav Links  */}
           <div className="hidden md:flex items-center gap-8 text-sm text-neutral-300">
-            <button
-              onClick={() =>
-                document
-                  .getElementById("features")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="hover:text-white transition"
-            >
-              Features
-            </button>
-
-            <button
-              onClick={() =>
-                document
-                  .getElementById("demo")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="hover:text-white transition"
-            >
-              Demo
-            </button>
+            {navLinks.map((el) => (
+              <button
+                key={el.id}
+                onClick={() =>
+                  document
+                    .getElementById(el.id)
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="hover:text-white transition font-bold text-slate-200   cursor-pointer hover:underline"
+              >
+                {el.text}
+              </button>
+            ))}
           </div>
 
           {/* CTA */}
