@@ -4,14 +4,12 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-
 });
 
-// for better sharing preview - SEO specifc 
+// for better sharing preview - SEO specifc
 export const metadata: Metadata = {
   title: "PaperMind — Chat with your documents",
-  description:
-    "Upload PDFs and get accurate answers powered by AI.",
+  description: "Upload PDFs and get accurate answers powered by AI.",
   openGraph: {
     title: "PaperMind",
     description: "Chat with your documents using AI",
@@ -34,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} font-sans`}>
+      <body className={`${inter.className} font-sans bg-black text-white `}>
         {children}
       </body>
     </html>
